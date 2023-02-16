@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <title>Bootstrap</title>
+  </head>
+  <body>
+    <!-- <div class="dropdown m-5">
+      <button
+        class="btn btn-secondary dropdown-toggle"
+        type="button"
+        id="dropdownMenuButton1"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        Dropdown button
+      </button>
+
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li><a href="#" class="dropdown-item">hello</a></li>
+        <li class="dropdown-item"><a href="#">hello</a></li>
+        <li class="dropdown-item"><a href="#">hello</a></li>
+        <li class="dropdown-item"><a href="#">hello</a></li>
+      </ul>
+      
+    </div> -->
+    <!-- <button type="button" class="btn btn-primary position-relative">
+      Mails
+      <span
+        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary"
+        >+99 <span class="visually-hidden">unread messages</span></span
+      >
+    </button> -->
+
+    <div class="p-5">
+      <button
+        class="btn btn-primary"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#myCanvas"
+        role="button"
+        aria-controls="offcanvasExample"
+      >
+        Sidebar
+      </button>
+    </div>
+
+    <div
+      class="offcanvas offcanvas-start"
+      style="width: 21%"
+      tabindex="-1"
+      id="myCanvas"
+      aria-labelledby="offcanvasExampleLabel"
+    >
+      <div class="offcanvas-header">
+        <h5
+          class="offcanvas-title bg-primary w-100 p-3"
+          id="offcanvasExampleLabel"
+        >
+          My Blog
+          <button
+            type="button"
+            class="btn-close text-reset float-end"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </h5>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item bg-success">
+            <a class="nav-link active text-white" aria-current="page" href="#"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About US</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Terms & Condition</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ////////////////////// -->
+
+    <div class="row">
+      <!-- <div class="col-6">
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseOne"
+                aria-expanded="true"
+                aria-controls="collapseOne"
+              >
+                Accordion Item #1
+              </button>
+            </h2>
+            <div
+              id="collapseOne"
+              class="accordion-collapse collapse show"
+              aria-labelledby="headingOne"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <strong>This is the first item's accordion body.</strong> It is
+                shown by default, until the collapse plugin adds the appropriate
+                classes that we use to style each element. These classes control
+                the overall appearance, as well as the showing and hiding via
+                CSS transitions. You can modify any of this with custom CSS or
+                overriding our default variables. It's also worth noting that
+                just about any HTML can go within the
+                <code>.accordion-body</code>, though the transition does limit
+                overflow.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo"
+                aria-expanded="false"
+                aria-controls="collapseTwo"
+              >
+                Accordion Item #2
+              </button>
+            </h2>
+            <div
+              id="collapseTwo"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingTwo"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <strong>This is the second item's accordion body.</strong> It is
+                hidden by default, until the collapse plugin adds the
+                appropriate classes that we use to style each element. These
+                classes control the overall appearance, as well as the showing
+                and hiding via CSS transitions. You can modify any of this with
+                custom CSS or overriding our default variables. It's also worth
+                noting that just about any HTML can go within the
+                <code>.accordion-body</code>, though the transition does limit
+                overflow.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseThree"
+                aria-expanded="false"
+                aria-controls="collapseThree"
+              >
+                Accordion Item #3
+              </button>
+            </h2>
+            <div
+              id="collapseThree"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingThree"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <strong>This is the third item's accordion body.</strong> It is
+                hidden by default, until the collapse plugin adds the
+                appropriate classes that we use to style each element. These
+                classes control the overall appearance, as well as the showing
+                and hiding via CSS transitions. You can modify any of this with
+                custom CSS or overriding our default variables. It's also worth
+                noting that just about any HTML can go within the
+                <code>.accordion-body</code>, though the transition does limit
+                overflow.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- ///////////////// -->
+      <!-- <div class="col-10">
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseOne1"
+                aria-expanded="true"
+                aria-controls="collapseOne"
+              >
+                Accordion Item #1
+              </button>
+            </h2>
+            <div
+              id="collapseOne1"
+              class="accordion-collapse collapse show"
+              aria-labelledby="headingOne"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <strong>This is the first item's accordion body.</strong> It is
+                shown by default, until the collapse plugin adds the appropriate
+                classes that we use to style each element. These classes control
+                the overall appearance, as well as the showing and hiding via
+                CSS transitions. You can modify any of this with custom CSS or
+                overriding our default variables. It's also worth noting that
+                just about any HTML can go within the
+                <code>.accordion-body</code>, though the transition does limit
+                overflow.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo2"
+                aria-expanded="false"
+                aria-controls="collapseTwo"
+              >
+                Accordion Item #2
+              </button>
+            </h2>
+            <div
+              id="collapseTwo2"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingTwo"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <strong>This is the second item's accordion body.</strong> It is
+                hidden by default, until the collapse plugin adds the
+                appropriate classes that we use to style each element. These
+                classes control the overall appearance, as well as the showing
+                and hiding via CSS transitions. You can modify any of this with
+                custom CSS or overriding our default variables. It's also worth
+                noting that just about any HTML can go within the
+                <code>.accordion-body</code>, though the transition does limit
+                overflow.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseThree3"
+                aria-expanded="false"
+                aria-controls="collapseThree"
+              >
+                Accordion Item #3
+              </button>
+            </h2>
+            <div
+              id="collapseThree3"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingThree"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <strong>This is the third item's accordion body.</strong> It is
+                hidden by default, until the collapse plugin adds the
+                appropriate classes that we use to style each element. These
+                classes control the overall appearance, as well as the showing
+                and hiding via CSS transitions. You can modify any of this with
+                custom CSS or overriding our default variables. It's also worth
+                noting that just about any HTML can go within the
+                <code>.accordion-body</code>, though the transition does limit
+                overflow.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <ul class="nav nav-pills">
+              <li class="nav-item">
+                <a href="#form" class="nav-link active" data-bs-toggle="pill"
+                  >Form</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="#table" class="nav-link" data-bs-toggle="pill"
+                  >Table</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="#card" class="nav-link" data-bs-toggle="pill">Card</a>
+              </li>
+            </ul>
+
+            <div class="tab-content">
+              <div class="tab-pane fade" id="form">
+                1. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Rerum delectus doloribus sequi.
+              </div>
+              <div class="tab-pane fade" id="table">
+                2. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Rerum delectus doloribus sequi.
+              </div>
+              <div class="tab-pane fade" id="card">
+                3. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Rerum delectus doloribus sequi.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam fugiat
+          illo eaque assumenda?
+        </div>
+        <button class="btn btn-primary">Hello</button>
+      </div>
+    </div>
+
+    <!-- /////////////////////// -->
+
+    <div class="container">
+      <div class="row g">
+        <div class="col-6">
+          <div class="p-3 border bg-light">Custom column padding</div>
+        </div>
+        <div class="col-6">
+          <div class="p-3 border bg-light">Custom column padding</div>
+        </div>
+        <div class="col-6">
+          <div class="p-3 border bg-light">Custom column padding</div>
+        </div>
+        <div class="col-6">
+          <div class="p-3 border bg-light">Custom column padding</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ////////////////////////////// -->
+
+    <!-- <form class="row g-3 needs-validation" novalidate>
+      <div class="col-md-4">
+        <label for="validationCustom01" class="form-label">First name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="validationCustom01"
+          value="Mark"
+          required
+        />
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <div class="col-md-4">
+        <label for="validationCustom02" class="form-label">Last name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="validationCustom02"
+          value="Otto"
+          required
+        />
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <div class="col-md-4">
+        <label for="validationCustomUsername" class="form-label"
+          >Username</label
+        >
+        <div class="input-group has-validation">
+          <span class="input-group-text" id="inputGroupPrepend">@</span>
+          <input
+            type="text"
+            class="form-control"
+            id="validationCustomUsername"
+            aria-describedby="inputGroupPrepend"
+            required
+          />
+          <div class="invalid-feedback">Please choose a username.</div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="validationCustom03" class="form-label">City</label>
+        <input
+          type="text"
+          class="form-control"
+          id="validationCustom03"
+          required
+        />
+        <div class="invalid-feedback">Please provide a valid city.</div>
+      </div>
+      <div class="col-md-3">
+        <label for="validationCustom04" class="form-label">State</label>
+        <select class="form-select" id="validationCustom04" required>
+          <option selected disabled value="">Choose...</option>
+          <option>...</option>
+        </select>
+        <div class="invalid-feedback">Please select a valid state.</div>
+      </div>
+      <div class="col-md-3">
+        <label for="validationCustom05" class="form-label">Zip</label>
+        <input
+          type="text"
+          class="form-control"
+          id="validationCustom05"
+          required
+        />
+        <div class="invalid-feedback">Please provide a valid zip.</div>
+      </div>
+      <div class="col-12">
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="invalidCheck"
+            required
+          />
+          <label class="form-check-label" for="invalidCheck">
+            Agree to terms and conditions
+          </label>
+          <div class="invalid-feedback">You must agree before submitting.</div>
+        </div>
+      </div>
+      <div class="col-12">
+        <button class="btn btn-primary" type="submit">Submit form</button>
+      </div>
+    </form> -->
+
+    <!-- ////////////////////////////////////////// -->
+    <div class="container">
+      <div class="row">
+        <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+        <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+
+        <!-- Force next columns to break to new line -->
+        <!-- <div class="w-100"></div> -->
+
+        <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+        <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <div class="p-3 border bg-light">Custom column padding</div>
+        </div>
+        <div class="col-6">
+          <div class="p-3 border bg-light">Custom column padding</div>
+        </div>
+        <div class="col-6">
+          <div class="p-3 border bg-light">Custom column padding</div>
+        </div>
+        <div class="col-6">
+          <div class="p-3 border bg-light">Custom column padding</div>
+        </div>
+      </div>
+    </div>
+    <!-- ////////////////////////////////////////// -->
+
+    <div class="container">
+      <div class="row">
+        <div class="col">1 of 2</div>
+        <div class="col">2 of 2</div>
+      </div>
+      <div class="row">
+        <div class="col">1 of 3</div>
+        <div class="col">2 of 3</div>
+        <div class="col">3 of 3</div>
+      </div>
+    </div>
+
+    <!-- ///////////////////////////////////// -->
+    <!-- <div style="width: 50%">
+      <div class="overflow-scroll">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error qui
+          illum iusto blanditiis cum placeat suscipit. Assumenda temporibus ex
+          neque voluptatem tempora ea expedita saepe quod explicabo minus.
+          Blanditiis magni cupiditate voluptatum fugiat iure praesentium. Cum,
+          soluta ex sed ad vitae natus. Ipsam beatae cumque quam excepturi ea
+          autem explicabo placeat molestiae dolorem maiores maxime voluptatibus
+          sequi ullam quos eius quibusdam illo rerum molestias, aperiam debitis
+          corporis deleniti unde aspernatur temporibus! Hic, ea accusantium
+          magnam laudantium voluptatibus a deleniti suscipit. Nulla
+        </p>
+      </div>
+    </div> -->
+
+    <!-- //////////////////////////// -->
+
+    <div class="shadow p-3 mb-5 bg-body rounded w-50">Regular shadow</div>
+
+    <!-- ///////////////////////////////////////////// -->
+
+    <div class="list-group w-25" style="margin: 0 auto">
+      <a
+        href="#"
+        class="list-group-item list-group-item-action active"
+        style="height: 10rem"
+        aria-current="true"
+      >
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">List group item heading</h5>
+          <small>3 days ago</small>
+        </div>
+        <p class="mb-1">Some placeholder content in a paragraph.</p>
+        <small>And some small print.</small>
+      </a>
+    </div>
+
+    <!-- //////////////////////////////////////////////////////// -->
+    <form>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="flexRadioDefault"
+          id="flexRadioDefault1"
+        />
+        <label class="form-check-label" for="flexRadioDefault1">
+          Default radio
+        </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="flexRadioDefault"
+          id="flexRadioDefault2"
+          checked
+        />
+        <label class="form-check-label" for="flexRadioDefault2">
+          Default checked radio
+        </label>
+      </div>
+    </form>
+
+    <!-- /////////////////////////////////////////////////////////////// -->
+
+    <div class="row p-5">
+      <div class="col-4">
+        <div class="list-group" id="list-tab" role="tablist">
+          <a
+            class="list-group-item list-group-item-action active"
+            data-bs-toggle="list"
+            href="#list-home"
+            role="tab"
+            >Home</a
+          >
+          <a
+            class="list-group-item list-group-item-action"
+            data-bs-toggle="list"
+            href="#list-profile"
+            role="tab"
+            >Profile</a
+          >
+        </div>
+      </div>
+      <div class="col-8">
+        <div class="tab-content" id="nav-tabContent">
+          <div class="tab-pane fade show active" id="list-home" role="tabpanel">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam
+            repudiandae ut qui?
+          </div>
+          <div class="tab-pane fade" id="list-profile" role="tabpanel">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus
+            explicabo eaque mollitia atque unde quos laudantium ipsam optio enim
+            quibusdam? Mollitia, sit sapiente.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ///////////////////////////////////////// -->
+    <div class="row g-3">
+      <div class="col-auto">
+        <label for="inputPassword6" class="col-form-label">Password</label>
+      </div>
+      <div class="col-auto">
+        <input
+          type="password"
+          id="inputPassword6"
+          class="form-control"
+          aria-describedby="passwordHelpInline"
+        />
+      </div>
+      <div class="col-auto">
+        <span id="passwordHelpInline" class="form-text">
+          Must be 8-20 characters long.
+        </span>
+      </div>
+    </div>
+
+    <script src="app.js">
+            (function () {
+        'use strict'
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll('.needs-validation')
+
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms)
+          .forEach(function (form) {
+            form.addEventListener('submit', function (event) {
+              if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+              }
+
+              form.classList.add('was-validated')
+            }, false)
+          })
+      })()
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

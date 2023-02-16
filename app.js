@@ -178,3 +178,23 @@ const date = new Date();
 //   return x + y + z;
 // };
 // console.log(fn(...arr));
+
+const arr = [1, 2, 3, 4, 5, 6, 7];
+
+const mainFunction = (arra, cb) => {
+  for (let i = 0; i < arra.length; i++) {
+    cb(arra[i]);
+  }
+};
+
+const filterFunction = (item) => {
+  let filterArr = [];
+  if (item == 2) {
+    filterArr.push(item);
+  }
+
+  return filterArr;
+};
+
+console.log(filterFunction());
+console.log(mainFunction(arr, filterFunction));

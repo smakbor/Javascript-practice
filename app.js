@@ -179,22 +179,79 @@ const date = new Date();
 // };
 // console.log(fn(...arr));
 
-const arr = [1, 2, 3, 4, 5, 6, 7];
+// const arr = [1, 2, 3, 4, 5, 6, 7];
 
-const mainFunction = (arra, cb) => {
-  for (let i = 0; i < arra.length; i++) {
-    cb(arra[i]);
-  }
+// const mainFunction = (array, cb) => {
+//   for (let i = 0; i < array.length; i++) {
+//     cb(array[i]);
+//   }
+// };
+
+// const filterFunction = (item) => {
+//   let filterArr = [];
+//   if (item == 2) {
+//     filterArr.push(item);
+//   }
+//   return filterArr;
+// };
+
+// console.log(filterFunction());
+// console.log(mainFunction(arr, filterFunction));
+
+// const student = [
+//   {
+//     id: 2011034195,
+//     name: "SM Akbor",
+//     city: "Narail",
+//     skill: {
+//       programming: "Javascript",
+//     },
+//   },
+//   {
+//     id: 201203211,
+//     name: "Jahid Hasan",
+//     city: "Jessore",
+//     skill: {
+//       videoEditing: "Camptia",
+//     },
+//   },
+//   {
+//     id: 2012032114,
+//     name: "Yeakub Alli",
+//     city: "Khustia",
+//     skill: {
+//       graphics: "Canva",
+//     },
+//   },
+// ];
+
+// const newStudent = student.map((item) => {
+//   return {
+//     ...item,
+//     skill: {
+//       ...skill,
+//       graphics: "hello",
+//     },
+//   };
+// });
+// console.log(newStudent);
+
+const student = {
+  id: 2011034195,
+  name: "SM Akbor",
+  city: "Narail",
+  skill: {
+    programming: "Javascript",
+    marketing: "Disital Marketing",
+  },
 };
 
-const filterFunction = (item) => {
-  let filterArr = [];
-  if (item == 2) {
-    filterArr.push(item);
-  }
-
-  return filterArr;
+const newStudent = {
+  ...student,
+  skill: {
+    ...student.skill,
+    programming: "NodeJs",
+  },
 };
 
-console.log(filterFunction());
-console.log(mainFunction(arr, filterFunction));
+console.log(newStudent);
